@@ -2,7 +2,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 
 class BERTDataset(Dataset):
-    def __init__(self, text, labels, attention_scores, max_length, tokenizer, projection_dim, val=False):
+    def __init__(self, text, labels, max_length, tokenizer, projection_dim, val=False):
         self.data = text
         self.labels = labels
         self.max_length = max_length
