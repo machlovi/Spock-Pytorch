@@ -49,6 +49,6 @@ class BERTDataset(Dataset):
                        max_length=MAX_LEN, tokenizer=tokenizer, projection_dim=PROJECTION_DIM)
 
         val_loader = DataLoader(val_ds, batch_size=BATCH_SIZE, shuffle=True)
-        train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True)
+        train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE)
 
         return train_loader, val_loader
